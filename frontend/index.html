@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enterprise RAG &amp; SQL Copilot</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ── Sidebar ──────────────────────────────────────────────────────── -->
+  <aside id="sidebar">
+    <h2>📂 Sessions</h2>
+    <button id="btn-new-session">+ New Chat</button>
+    <ul id="session-list"></ul>
+
+    <hr />
+
+    <h3>📊 Analytics</h3>
+    <div id="analytics-panel">
+      <p>Documents: <span id="stat-docs">—</span></p>
+      <p>Chunks: <span id="stat-chunks">—</span></p>
+      <p>Sessions: <span id="stat-sessions">—</span></p>
+      <p>Messages: <span id="stat-messages">—</span></p>
+    </div>
+  </aside>
+
+  <!-- ── Main Content ─────────────────────────────────────────────────── -->
+  <main id="main">
+    <header>
+      <h1>🤖 Enterprise RAG &amp; SQL Copilot</h1>
+    </header>
+
+    <!-- Upload Area -->
+    <section id="upload-section">
+      <h3>Upload Document</h3>
+      <form id="upload-form">
+        <input type="file" id="file-input" accept=".txt,.csv,.pdf,.docx" />
+        <button type="submit">Upload</button>
+      </form>
+      <p id="upload-status"></p>
+    </section>
+
+    <!-- Chat Area -->
+    <section id="chat-section">
+      <div id="chat-messages"></div>
+      <form id="chat-form">
+        <input
+          type="text"
+          id="chat-input"
+          placeholder="Ask a question about your data…"
+          autocomplete="off"
+        />
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
